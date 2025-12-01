@@ -74,7 +74,7 @@ public class Wordle {
     public static void storeGuess(String guess, char[][] guesses, int row) {
 		for(int i=0; i<5; i++){
             guesses[row][i]= guess.charAt(i);
-        }
+        } 
     }
 
     // Prints the game board up to currentRow (inclusive).
