@@ -140,9 +140,10 @@ public class Wordle {
                     guess= guess.toUpperCase();
                     valid = true;
                 }
-                storeGuess(guess, guesses, attempt);
-            computeFeedback(secret, guess, results[attempt]);
+               
             }
+             storeGuess(guess, guesses, attempt);
+            computeFeedback(secret, guess, results[attempt]);
 
             // Store guess and compute feedback
             // ... use storeGuess and computeFeedback
