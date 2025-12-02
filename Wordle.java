@@ -81,7 +81,7 @@ public class Wordle {
     public static void printBoard(char[][] guesses, char[][] results, int currentRow) {
         System.out.println("Current board:");
         for (int row = 0; row <= currentRow; row++) {
-            System.out.print("Guess " + (row + 1) + ": "+ guesses[row]);
+            System.out.print("Guess " + (row + 1) + ": ");
             for (int col = 0; col < guesses[row].length; col++) {
                 System.out.print(guesses[row][col]);
             }
@@ -140,6 +140,8 @@ public class Wordle {
                     guess= guess.toUpperCase();
                     valid = true;
                 }
+                storeGuess(guess, guesses, attempt);
+            computeFeedback(secret, guess, results[attempt]);
             }
 
             // Store guess and compute feedback
